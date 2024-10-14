@@ -51,3 +51,12 @@ while h >= 0:
     h = h + v * np.sin(theta_rad) * dt
     x = x + v * np.cos(theta_rad) * dt #Pos horizontal 
     t += dt
+
+#Graficar
+plt.figure()
+plt.plot(posiciones_x, alturas)
+plt.title("Trayectoria del cohete")
+plt.xlabel("Posición horizontal en metros")
+plt.ylabel("Altura (m)")
+plt.grid()
+plt.show() 

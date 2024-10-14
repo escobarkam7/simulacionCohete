@@ -20,7 +20,7 @@ def gravedad(h):
 #Función para calcular la fuerza de resistencia del aire en función de la velocidad del coehete
 #La resistencia aumenta con el cuadrado de la velocidad
 def resistencia(v):
-    return 0.5 * c_d * A * rho * v**2
+    return 0.5 * C_d * A * rho * v**2
 
 #-----------------------Simulación
 t = 0 #t0
@@ -57,6 +57,6 @@ plt.figure()
 plt.plot(posiciones_x, alturas)
 plt.title("Trayectoria del cohete")
 plt.xlabel("Posición horizontal en metros")
-plt.ylabel("Altura (m)")
+plt.ylabel("Altura en metros")
 plt.grid()
 plt.show() 

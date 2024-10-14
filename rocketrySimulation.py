@@ -13,4 +13,8 @@ v0 = 500  #Velocidad inicial (m/s)
 theta = 45  #Ángulo de lanzamiento en grados
 theta_rad = np.radians(theta) #Conversión del ángulo a radianes
 
+#Funcion para obtener la gravedad con respecto a la altura
+def gravedad(h):
+    return g0 * (R / (R + h))**2
+
 

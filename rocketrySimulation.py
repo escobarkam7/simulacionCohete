@@ -34,3 +34,20 @@ y = 0 #pos vertical
 tiempos = []
 alturas = []
 posiciones_x = []
+
+#Bluce de simulación
+while h >= 0:
+    #Guardar los datos en las listas
+    tiempos.append(t)
+    alturas.append(h)
+    posiciones_x.append(x)
+
+    #Calcular fuerzas
+    g = gravedad(h) #Gravedad en la altura actual
+    F_res = resistencia(v) #F de resistencia del aire
+
+    #Ecuaciones de movimiento para actualizar las variables
+    v = v - (g + F_res) * dt 
+    h = h + v * np.sin(theta_rad) * dt
+    x = x + v * np.cos(theta_rad) * dt #Pos horizontal 
+    t += dt

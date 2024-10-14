@@ -17,4 +17,5 @@ theta_rad = np.radians(theta) #Conversión del ángulo a radianes
 def gravedad(h):
     return g0 * (R / (R + h))**2
 
-
+#Función para calcular la fuerza de resistencia del aire en función de la velocidad del coehete
+#La resistencia aumenta con el cuadrado de la velocidad

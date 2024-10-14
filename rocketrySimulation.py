@@ -19,3 +19,18 @@ def gravedad(h):
 
 #Función para calcular la fuerza de resistencia del aire en función de la velocidad del coehete
 #La resistencia aumenta con el cuadrado de la velocidad
+def resistencia(v):
+    return 0.5 * c_d * A * rho * v**2
+
+#-----------------------Simulación
+t = 0 #t0
+dt = 0.1 #Paso de tiempo
+h = 0 #h0
+v = v0 #v0
+x = 0 #pos horizontal
+y = 0 #pos vertical
+
+#Listas para almacenar valores
+tiempos = []
+alturas = []
+posiciones_x = []
